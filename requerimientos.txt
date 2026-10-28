@@ -1,1 +1,3 @@
 Versiones de librerías usadas u otros elementos de interés. 
+streamlit
+pandas
