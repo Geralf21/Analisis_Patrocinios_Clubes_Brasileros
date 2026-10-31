@@ -1,1 +1,1 @@
-Carpeta creada para los notebooks/colab de análisis creados por cada intengrante.
+Carpeta para los notebooks/colab de análisis creados por cada intengrante.
