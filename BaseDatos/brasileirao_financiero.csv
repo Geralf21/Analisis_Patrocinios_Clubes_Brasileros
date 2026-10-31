@@ -1,0 +1,64 @@
+﻿club,ano,unidade,fuente_pdf,ativo_circulante,ativo_nao_circulante,ativo_total,passivo_circulante,passivo_nao_circulante,patrimonio_liquido,passivo_total_e_pl,receita_operacional_liquida,custos_despesas_operacionais,resultado_operacional,resultado_financeiro_liquido,superavit_deficit_exercicio,receita_tv_transmissao,receita_patrocinio,receita_bilheteria,receita_socio_torcedor,receita_negociacao_atletas,intangivel_atletas
+Corinthians,2019,milhares de reais,2019_corinthians.pdf,-979288.0,790147.0,977625.0,967342.0,317921.0,4.0,968674.0,369713.0,,,-70593.0,-134011.0,201.0,70.0,201.0,,201.0,9.0
+Corinthians,2020,milhares de reais,2020_corinthians.pdf,333810.0,825441.0,,847215.0,443514.0,1159251.0,1159251.0,425398.0,,,,,160142.0,71143.0,-3602.0,,,9.0
+Corinthians,2021,milhares de reais,2021_corinthians.pdf,7.0,6876.0,202.0,962296.0,502542.0,-127467.0,1337371.0,9.0,,,,1.0,265915.0,126328.0,388.0,,191.0,8.0
+Corinthians,2022,milhares de reais,2022_corinthians.pdf,398089.0,852746.0,1250835.0,824323.0,540292.0,-113780.0,1250835.0,652242.0,,,,2792.0,317609.0,93628.0,388.0,,,8.0
+Corinthians,2023,milhares de reais,2023_corinthians.pdf,7.0,,,5.0,8.0,8.0,,9.0,,,,-119625.0,307004.0,117067.0,202.0,,,8.0
+Corinthians,2024,milhares de reais,2024_corinthians.pdf,516504.0,,9.0,516504.0,11.0,202.0,,,,,,191296.0,295064.0,253721.0,50.0,,,8.0
+Corinthians,2025,milhares de reais,2025_corinthians.pdf,436997.0,1546101.0,1983098.0,979759.0,1777533.0,18.0,1983098.0,19.0,,-174500.0,200.0,316657.0,200.0,202.0,115.0,2000.0,202.0,9.0
+Flamengo,2019,milhares de reais,2019_flamengo.pdf,202467.0,676359.0,878826.0,317127.0,433568.0,18.0,878826.0,19.0,,,95405.0,62921.0,357.0,4.0,45.0,45.0,3.0,44123.0
+Flamengo,2020,milhares de reais,2020_flamengo.pdf,198227.0,746296.0,944523.0,495065.0,428248.0,21209.0,944522.0,17.0,,,-65614.0,-106922.0,202.0,67.0,73.0,114.0,43.0,53171.0
+Flamengo,2021,milhares de reais,2021_flamengo.pdf,304754.0,761873.0,1066627.0,366071.0,501700.0,198856.0,1066627.0,17.0,,,188145.0,177646.0,2.0,1.1,202.0,202.0,1.0,202.0
+Flamengo,2022,milhares de reais,2022_flamengo.pdf,343558.0,788335.0,1131893.0,392167.0,405180.0,334546.0,1131893.0,17.0,,,156676.0,135690.0,15.0,109705.0,202.0,90.0,1.0,7.0
+Flamengo,2023,milhares de reais,2023_flamengo.pdf,455914.0,874035.0,1389902.0,375282.0,360529.0,654091.0,1389902.0,17.0,,,291698.0,319545.0,149870.0,202.0,122892.0,219.0,1.0,7.0
+Flamengo,2024,milhares de reais,2024_flamengo.pdf,,,,,,6.0,,4.0,202.0,,67.0,,202.0,2.0,2.0,,1.0,
+Flamengo,2025,milhares de reais,2025_flamengo.pdf,,,,,,2.0,,3.0,,,,,,,322.0,,4.0,
+Fluminense,2019,milhares de reais,2019_fluminense.pdf,,,,156958.0,,-265999.0,452867.0,1.0,-200491.0,,49527.0,13.0,81087.0,9352.0,16384.0,5348.0,201.0,3.0
+Fluminense,2020,milhares de reais,2020_fluminense.pdf,,,,,,-268936.0,499899.0,1.0,-182876.0,,540.0,-2922.0,-2.0,9769.0,80.0,97.0,,3.0
+Fluminense,2021,milhares de reais,2021_fluminense.pdf,,,,,,202.0,740757.0,1.0,-291030.0,22905.0,22905.0,-2059.0,-2.0,9769.0,34432.0,17.0,1.0,3.0
+Fluminense,2022,milhares de reais,2022_fluminense.pdf,12.0,,,,,202.0,793313.0,5.0,-292046.0,36874.0,36874.0,7060.0,36527.0,12450.0,21817.0,13511.0,,7.0
+Fluminense,2023,milhares de reais,2023_fluminense.pdf,12.0,,,,,185.0,637.0,5.0,327.0,123.0,123.0,721.0,202.0,202.0,21.5,49399.0,,7.0
+Fluminense,2024,milhares de reais,2024_fluminense.pdf,12.0,,,,,202.0,865711.0,4.0,-593300.0,200.0,68772.0,114.0,166696.0,78274.0,29192.0,69864.0,,6.0
+Fluminense,2025,milhares de reais,2025_fluminense.pdf,12.0,,860871.0,,31.0,31.0,860871.0,17.0,-885299.0,,,51585.0,202.0,202.0,35895.0,59684.0,,202.0
+Grêmio,2019,milhares de reais,2019_gremio.pdf,,,357791.0,11104.0,16039.0,10.0,357791.0,,,,,22193.0,164528.0,12500.0,,,107821.0,93528.0
+Grêmio,2020,milhares de reais,2020_gremio.pdf,,,,,,202.0,,,,,52095.0,37517.0,145635.0,10000.0,,,119640.0,105609.0
+Grêmio,2021,milhares de reais,2021_gremio.pdf,,,433392.0,,,10.0,433392.0,,,,23194.0,14222.0,190640.0,201.0,,,156215.0,124208.0
+Grêmio,2022,milhares de reais,2022_gremio.pdf,,,,32078.0,16039.0,10.0,470837.0,,,,-26126.0,-96341.0,69981.0,0.7,,,96704.0,202.0
+Grêmio,2023,milhares de reais,2023_gremio.pdf,,,417038.0,18539.0,18539.0,10.0,417038.0,,,,9510.0,-45441.0,202.0,25408.0,,,49240.0,2.0
+Grêmio,2024,milhares de reais,2024_gremio.pdf,,,585334.0,,,9.0,585334.0,22.0,,,104485.0,43592.0,202.0,28.0,,,49240.0,2.0
+Grêmio,2025,milhares de reais,2025_gremio.pdf,12.0,12.0,760385.0,,,10.0,760385.0,202.0,,,130122.0,35484.0,202.0,12.0,,,-18944.0,157495.0
+Internacional,2019,milhares de reais,2019_internacional.pdf,,,,,,,,,,,,,,,,,,
+Internacional,2020,milhares de reais,2020_internacional.pdf,,,,,,,,,,,,,,,,,,
+Internacional,2021,milhares de reais,2021_internacional.pdf,,,,,,,,,,,,,,,,,,
+Internacional,2022,milhares de reais,2022_internacional.pdf,,,,,,,,,,,,,,,,,,
+Internacional,2023,milhares de reais,2023_internacional.pdf,,,1408691.0,,,202.0,1408691.0,22.0,,,-61073.0,170383.0,38329.0,202.0,202.0,,202.0,12.0
+Internacional,2024,milhares de reais,2024_internacional.pdf,,,1536515.0,,,202.0,1536515.0,23.0,,,-64102.0,170383.0,15.0,202.0,19166.0,,258.0,12.0
+Internacional,2025,milhares de reais,2025_internacional.pdf,,,1571724.0,4338.0,,202.0,1571724.0,22.0,,,-65335.0,8972.0,11.0,5.0,202.0,,202.0,11.0
+Palmeiras,2019,milhares de reais,2019_palmeiras.pdf,,,737774.0,,,201.0,737774.0,,,,-22357.0,30688.0,13.0,14.0,9.0,46091.0,16.0,7.0
+Palmeiras,2020,milhares de reais,2020_palmairas.pdf,,,676248.0,,,202.0,676248.0,532419.0,,,60.0,-151016.0,28.0,29.0,-19.0,-19.0,202.0,23.0
+Palmeiras,2021,milhares de reais,2021_palmeiras.pdf,,,630152.0,202.0,,33783.0,630152.0,243404.0,,,,11.0,29.0,29.0,202.0,31.0,22231.0,23.0
+Palmeiras,2022,milhares de reais,2022_palmeiras.pdf,,,1381145.0,202.0,,33783.0,1381145.0,790545.0,,,41.0,18210.0,29.0,30.0,28375.0,31.0,32692.0,23.0
+Palmeiras,2023,milhares de reais,2023_palmeiras.pdf,,,1256732.0,202.0,,129178.0,1256732.0,839140.0,,,8.5,8525.0,29.0,29.0,19337.0,30.0,5020.0,23.0
+Palmeiras,2024,milhares de reais,2024_palmeiras.pdf,,,1761531.0,202.0,,276583.0,1761531.0,1207361.0,,,76.4,17814.0,26.0,27.0,201.0,28.0,205284.0,23.0
+Palmeiras,2025,milhares de reais,2025_palmeiras.pdf,,,2153591.0,,,202.0,2153591.0,1628486.0,,,292.0,292395.0,15.0,16.0,2.0,18.0,202.0,24.0
+Santos,2019,milhares de reais,2019 - SANTOS Balanço Auditado.pdf,,,,,,,,,,,,,,,,,,
+Santos,2020,milhares de reais,2020 - SANTOS Balanço Auditado.pdf,,,,,,,,,,,,,,,,,,
+Santos,2021,milhares de reais,2021 -SANTOS  Balanço Auditado.pdf,,,,,,,,,,,,,,,,,,
+Santos,2022,milhares de reais,2022 -SANTOS  Balanço Auditado.pdf,,,,,,,,,,,,,,,,,,
+Santos,2023,milhares de reais,2023 -SANTOS  Balanço Auditado.pdf,,,,,,,,,,,,,,,,,,
+Santos,2024,milhares de reais,2024 –SANTOS  Balanço Auditado.pdf,216063.0,,447069.0,437055.0,539985.0,-529971.0,447069.0,,,,58361753.0,14.0,18474.0,2.0,22495.0,,20.0,10.0
+Santos,2025,milhares de reais,2025 -SANTOS  Balanço Auditado.pdf,232448.0,,622592.0,470741.0,761218.0,-609367.0,622592.0,,,,104896734.0,14.0,202.0,202.0,28549.0,,20.0,10.0
+São Paulo FC,2019,milhares de reais,2019_saopaulo.pdf,,,926958.0,,,1.0,926958.0,,,,,,110418.0,21275.0,38833.0,9505.0,20.0,200479.0
+São Paulo FC,2020,milhares de reais,2020_saopaulo.pdf,,,779157.0,,,1.0,779157.0,,,,,-129605.0,126521.0,16176.0,6538.0,7203.0,21.0,154899.0
+São Paulo FC,2021,milhares de reais,2021_saopaulo.pdf,,,949647.0,13.0,,1.0,949647.0,,,,,-106470.0,194814.0,202.0,8460.0,32.0,21.0,131653.0
+São Paulo FC,2022,milhares de reais,2022_saopaulo.pdf,,,882560.0,13.0,,202.0,882560.0,650841.0,,,52217.0,37493.0,176006.0,33060.0,1245901.0,9517.0,10.0,1016.0
+São Paulo FC,2023,milhares de reais,2023_saopaulo.pdf,,,1009099.0,13.0,,1.0,1009099.0,668963.0,,,-71937.0,-62258.0,259441.0,202.0,15.0,19162.0,166546.0,144006.0
+São Paulo FC,2024,milhares de reais,2024_saopaulo.pdf,,,1279503.0,150.0,,-595787.0,199123.0,,,,,-287640.0,236702.0,13.0,13.0,13.0,579296.0,202.0
+São Paulo FC,2025,milhares de reais,2025_saopaulo.pdf,382459.0,897044.0,1918519.0,844790.0,1030500.0,-536217.0,202.0,,,,,56981.0,245095.0,121386.0,16.0,56243.0,,92834.0
+Vasco da Gama,2019,milhares de reais,balance_financiero_vasco_da_gama_2019.pdf,,,250292.0,,,32.0,189253.0,21.0,,,-36502.0,-5095.0,201.0,201.0,15.0,201.0,202.0,-59.0
+Vasco da Gama,2020,milhares de reais,balance_financiero_vasco_da_gama_2020.pdf,,,,,,,,,,,,,202.0,,,,,
+Vasco da Gama,2021,milhares de reais,balance_financiero_vasco_da_gama_2021.pdf,,,267676.0,,,23.0,267676.0,175864.0,,,-21535.0,122193.0,21.0,4.0,23.0,202.0,202.0,10.0
+Vasco da Gama,2022,milhares de reais,balance_financiero_vasco_da_gama_2022.pdf,53637.0,59917.0,146342.0,28740.0,74824.0,119222.0,146342.0,77358.0,,30.0,-7458.0,586566.0,20.0,4.0,0.0,100.0,,9.0
+Vasco da Gama,2023,milhares de reais,balance_financiero_vasco_da_gama_2023.pdf,202.0,,,202.0,,,,202.0,,,,2.0,15.0,,202.0,202.0,,202.0
+Vasco da Gama,2024,milhares de reais,balance_financiero_vasco_da_gama_2024.pdf,,,,,,,,,,,,202.0,,110.0,,,,
+Vasco da Gama,2025,milhares de reais,balance_financiero_vasco_da_gama_2025.pdf,24914.0,,448808.0,,,639992.0,448808.0,26.0,,,30.0,1.0,20.0,1.0,49947.0,202.0,-23311.0,11.0
