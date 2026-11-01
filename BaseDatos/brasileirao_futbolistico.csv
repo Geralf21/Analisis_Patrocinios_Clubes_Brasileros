@@ -1,0 +1,55 @@
+﻿club,año,patrocinador_master,ingresos_sponsors_millones_BRL,posicion_liga,puntos_obtenidos,gasto_fichajes_millones_EUR,ingresos_ventas_millones_EUR,competicion_internacional
+Flamengo,2021,BRB,32.0,2.0,71,14.2,44.0,Libertadores
+Palmeiras,2021,Crefisa,81.0,3.0,66,7.5,12.5,Libertadores
+Corinthians,2021,Neo Quimica,22.0,5.0,57,0.0,18.0,Libertadores
+Sao Paulo,2021,Sportsbet.io,29.0,13.0,48,8.1,15.2,Libertadores
+Vasco da Gama,2021,Banco BMG,5.0,,49,0.5,6.0,Ninguna
+Fluminense,2021,Betano,15.0,7.0,54,2.1,14.0,Libertadores
+Gremio,2021,Banrisul,13.0,17.0,43,8.4,21.0,Sudamericana
+Internacional,2021,Banrisul,13.0,12.0,48,4.2,19.5,Libertadores
+Santos,2021,SumUp,10.0,10.0,50,6.0,16.0,Sudamericana
+Flamengo,2022,BRB,32.0,5.0,62,14.0,11.5,Libertadores
+Palmeiras,2022,Crefisa,81.0,1.0,81,19.8,14.2,Libertadores
+Corinthians,2022,Neo Quimica,22.0,4.0,65,2.5,11.0,Libertadores
+Sao Paulo,2022,Sportsbet.io,29.0,9.0,54,6.8,22.5,Sudamericana
+Vasco da Gama,2022,Pixbet,22.0,,62,1.2,4.5,Ninguna
+Fluminense,2022,Betano,15.0,3.0,70,3.5,12.8,Sudamericana
+Gremio,2022,Banrisul,13.0,,65,0.8,16.0,Ninguna
+Internacional,2022,Banrisul,13.0,2.0,73,8.5,24.0,Sudamericana
+Santos,2022,Pixbet,25.0,12.0,47,7.2,21.0,Sudamericana
+Flamengo,2023,BRB,32.0,4.0,66,22.0,28.5,Libertadores
+Palmeiras,2023,Crefisa,81.0,1.0,70,5.0,65.0,Libertadores
+Corinthians,2023,Neo Quimica,22.0,13.0,50,20.4,24.0,Libertadores
+Sao Paulo,2023,Sportsbet.io,29.0,11.0,53,9.5,42.0,Sudamericana
+Vasco da Gama,2023,Pixbet,29.0,15.0,45,21.0,8.0,Ninguna
+Fluminense,2023,Betano,20.0,7.0,56,9.8,22.0,Libertadores
+Gremio,2023,Banrisul,13.0,2.0,68,6.5,14.5,Ninguna
+Internacional,2023,Banrisul,13.0,9.0,55,12.0,11.0,Libertadores
+Santos,2023,Blaze,45.0,17.0,43,14.0,20.0,Sudamericana
+Flamengo,2024,Pixbet,85.0,4.0,66,53.5,45.0,Libertadores
+Palmeiras,2024,Crefisa,81.0,2.0,73,34.0,72.0,Libertadores
+Corinthians,2024,Vaidebet,120.0,15.0,44,21.5,18.5,Sudamericana
+Sao Paulo,2024,Superbet,52.0,6.0,59,18.2,38.0,Libertadores
+Vasco da Gama,2024,Betfair,70.0,12.0,48,14.8,16.0,Ninguna
+Fluminense,2024,Superbet,42.0,16.0,46,13.5,29.0,Libertadores
+Gremio,2024,Banrisul,30.0,11.0,47,11.0,18.0,Libertadores
+Internacional,2024,Banrisul,30.0,5.0,65,15.2,22.0,Sudamericana
+Santos,2024,Blaze,45.0,,68,4.5,35.0,Ninguna
+Flamengo,2025,Betano,115.0,3.0,68,62.0,50.0,Libertadores
+Palmeiras,2025,Sportingbet,100.0,1.0,75,48.0,80.0,Libertadores
+Corinthians,2025,Esportes da Sorte,103.0,8.0,54,32.0,25.0,Sudamericana
+Sao Paulo,2025,Superbet,52.0,5.0,62,22.0,30.0,Libertadores
+Vasco da Gama,2025,Betfair,70.0,10.0,50,18.0,22.0,Sudamericana
+Fluminense,2025,Superbet,52.0,6.0,58,16.5,25.0,Libertadores
+Gremio,2025,Banrisul,30.0,7.0,56,14.0,20.0,Sudamericana
+Internacional,2025,Banrisul,30.0,4.0,64,18.0,26.0,Libertadores
+Santos,2025,Blaze,45.0,12.0,48,12.0,28.0,Sudamericana
+Flamengo,2026,Betano,115.0,2.0,70,65.0,55.0,Libertadores
+Palmeiras,2026,Sportingbet,100.0,3.0,68,50.0,85.0,Libertadores
+Corinthians,2026,Esportes da Sorte,103.0,7.0,56,35.0,28.0,Libertadores
+Sao Paulo,2026,Superbet,52.0,4.0,64,25.0,32.0,Libertadores
+Vasco da Gama,2026,Betfair,70.0,9.0,52,20.0,25.0,Sudamericana
+Fluminense,2026,Superbet,52.0,5.0,60,18.0,28.0,Libertadores
+Gremio,2026,Banrisul,30.0,8.0,55,15.0,22.0,Sudamericana
+Internacional,2026,Banrisul,30.0,6.0,62,20.0,28.0,Libertadores
+Santos,2026,Blaze,45.0,11.0,49,14.0,30.0,Sudamericana
