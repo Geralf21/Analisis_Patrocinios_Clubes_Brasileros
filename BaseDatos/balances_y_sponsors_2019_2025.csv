@@ -1,0 +1,56 @@
+club,año,ingreso_operativo_bruto,ingreso_recurrente,ingreso_comercial_total,patrocinio_uniforme,sponsor_bet_principal,tipo_presencia_bet,ingreso_sponsor_bet,contrato_bet_anualizado,pasivo_derechos_imagen,pasivo_circulante,superavit_o_deficit
+Palmeiras,2019,641.92,533.70,134.36,89.13,Nenhum,Sin Bet,0.00,0.00,39.57,252.46,1.72
+Palmeiras,2020,558.73,410.14,132.98,115.02,Nenhum,Sin Bet,0.00,0.00,46.69,359.50,-151.02
+Palmeiras,2021,972.57,833.42,198.44,86.00,Nenhum,Sin Bet,0.00,0.00,30.19,308.76,123.42
+Palmeiras,2022,856.07,682.27,164.23,85.90,Nenhum,Sin Bet,0.00,0.00,29.41,328.15,18.21
+Palmeiras,2023,908.91,721.91,162.76,91.43,Nenhum,Sin Bet,0.00,0.00,35.17,532.35,8.53
+Palmeiras,2024,"1,274.15","1,068.87",188.79,99.95,Esportes da Sorte / Sportingbet,Secundario / Transición,18.50,81.00,37.97,750.84,198.18
+Palmeiras,2025,"1,700.00","1,259.65",248.87,121.55,Sportingbet,Máster Principal,100.00,100.00,55.45,653.31,292.40
+Corinthians,2019,426.40,350.00,73.30,50.00,Marjosports,Secundario / Transición,4.50,4.50,48.50,967.30,-195.50
+Corinthians,2020,438.20,360.00,71.10,52.00,Galera.bet,Secundario / Transición,8.00,8.00,121.40,847.20,-123.30
+Corinthians,2021,447.80,390.00,126.30,84.00,Galera.bet,Secundario / Transición,8.00,8.00,47.20,962.30,5.70
+Corinthians,2022,687.00,633.00,93.60,70.00,Galera / Pixbet,Secundario / Transición,15.00,15.00,66.70,824.30,15.40
+Corinthians,2023,872.40,686.00,128.60,95.00,Pixbet / Galera,Secundario / Transición,20.00,20.00,114.00,"1,072.30",1.20
+Corinthians,2024,"1,114.90",777.00,264.50,217.40,VaiDeBet / Esportes da Sorte,Máster Principal,111.50,111.50,115.00,"1,250.00",-9.50
+Corinthians,2025,971.00,787.00,252.20,124.80,Esportes da Sorte / Viva da Sorte,Máster Principal,103.00,103.00,120.00,979.80,139.00
+São Paulo,2019,381.57,276.69,39.74,21.28,NetBet (Secundario),Secundario / Transición,3.00,3.00,6.68,483.15,-156.15
+São Paulo,2020,415.63,264.31,37.36,16.18,NetBet (Secundario),Secundario / Transición,3.00,3.00,19.06,539.30,-129.61
+São Paulo,2021,425.23,304.09,53.29,33.06,Sportsbet.io,Secundario / Transición,18.00,18.00,31.07,524.07,-106.47
+São Paulo,2022,660.51,431.82,73.42,54.14,Sportsbet.io,Máster Principal,24.00,24.00,31.07,579.02,37.49
+São Paulo,2023,680.75,560.03,72.16,46.09,Sportsbet.io,Máster Principal,24.00,24.00,49.65,639.45,-62.26
+São Paulo,2024,731.90,638.53,132.26,72.27,Superbet,Máster Principal,52.00,52.00,59.97,844.79,-287.64
+São Paulo,2025,"1,073.92",790.16,224.22,121.39,Superbet,Máster Principal,64.00,64.00,69.11,"1,038.24",56.98
+Grêmio,2019,408.37,300.55,37.15,37.15,Nenhum,Sin Bet,0.00,0.00,8.81,126.04,22.19
+Grêmio,2020,384.52,264.88,32.56,32.56,Nenhum,Sin Bet,0.00,0.00,17.88,195.99,37.52
+Grêmio,2021,467.24,311.02,45.40,45.40,MrJack.bet (Secundario),Secundario / Transición,3.00,3.00,18.34,213.90,14.22
+Grêmio,2022,287.95,191.25,43.98,43.98,MrJack.bet,Secundario / Transición,5.00,5.00,25.41,245.80,-96.34
+Grêmio,2023,423.68,374.44,74.07,74.07,Esporte da Sorte,Máster Principal,25.00,25.00,13.04,306.88,-45.44
+Grêmio,2024,403.08,297.78,65.38,65.38,Esporte da Sorte,Máster Principal,35.00,35.00,3.37,306.88,43.59
+Grêmio,2025,375.54,251.74,107.59,107.59,Esporte da Sorte,Máster Principal,42.50,42.50,13.69,516.50,35.48
+Flamengo,2019,950.00,651.00,106.00,78.86,Nenhum,Sin Bet,0.00,0.00,6.19,317.13,62.92
+Flamengo,2020,756.00,534.00,143.00,94.94,Nenhum,Sin Bet,0.00,0.00,12.42,441.38,-106.90
+Flamengo,2021,992.00,759.00,241.00,160.24,Pixbet,Secundario / Transición,12.00,12.00,15.20,485.50,177.60
+Flamengo,2022,"1,231.00","1,043.00",339.00,188.00,Pixbet,Máster Principal,24.00,24.00,18.50,512.00,142.00
+Flamengo,2023,"1,374.00","1,071.00",420.00,226.00,Pixbet,Máster Principal,24.00,24.00,22.10,588.00,320.00
+Flamengo,2024,"1,334.00","1,227.00",454.00,255.00,Pixbet,Máster Principal,105.00,142.50,25.40,685.00,-1.00
+Flamengo,2025,"2,089.00","1,571.00",541.00,290.00,Pixbet,Máster Principal,268.50,268.50,28.00,720.00,336.00
+Vasco da Gama,2019,215.00,194.00,16.00,16.00,Nenhum,Sin Bet,0.00,0.00,0.00,281.73,-5.00
+Vasco da Gama,2020,192.00,171.00,16.03,13.54,Nenhum,Sin Bet,0.00,0.00,0.00,325.27,-77.53
+Vasco da Gama,2021,186.00,176.00,19.79,17.69,Pixbet,Secundario / Transición,3.50,3.50,0.00,294.83,122.19
+Vasco da Gama,2022,77.00,77.00,11.80,11.49,Pixbet,Secundario / Transición,4.50,4.50,0.00,50.89,709.00
+Vasco da Gama,2024,303.89,282.34,53.00,53.00,Betfair,Máster Principal,53.00,53.00,198.54,470.27,-114.68
+Vasco da Gama,2025,446.35,413.88,108.21,108.21,Betfair,Máster Principal,70.00,70.00,112.99,384.51,81.22
+Santos FC,2019,399.83,184.05,18.00,18.00,Nenhum,Sin Bet,0.00,0.00,0.00,340.99,23.50
+Santos FC,2020,239.80,222.26,22.07,22.07,Nenhum,Sin Bet,0.00,0.00,13.54,341.00,-148.54
+Santos FC,2021,406.84,299.71,49.82,49.82,Pixbet,Secundario / Transición,7.50,7.50,4.93,316.93,43.94
+Santos FC,2022,341.85,271.31,55.63,55.63,Pixbet,Secundario / Transición,15.60,15.60,8.29,351.60,16.89
+Santos FC,2023,399.58,250.93,77.63,77.63,Blaze (Profilic Trade),Máster Principal,22.50,22.50,8.60,314.23,-5.45
+Santos FC,2024,459.49,252.04,89.11,89.11,Blaze (Profilic Trade),Máster Principal,27.50,27.50,16.93,437.06,-105.21
+Santos FC,2025,678.51,489.99,142.43,142.43,Ana Gaming (7K),Máster Principal,37.50,51.00,25.97,470.74,-79.40
+Fluminense,2019,265.20,159.78,14.70,9.35,Nenhum,Sin Bet,0.00,0.00,13.67,201.20,-9.30
+Fluminense,2020,194.31,143.98,20.32,9.77,Nenhum,Sin Bet,0.00,0.00,17.41,275.16,-2.92
+Fluminense,2021,333.63,224.04,28.86,20.10,Betano,Secundario / Transición,7.50,7.50,15.80,306.81,-2.06
+Fluminense,2022,347.24,253.31,54.82,32.55,Betano,Secundario / Transición,15.00,15.00,12.50,324.50,7.03
+Fluminense,2023,474.78,245.17,106.41,49.63,Betano,Secundario / Transición,20.00,20.00,8.20,388.90,78.70
+Fluminense,2024,684.18,416.01,148.13,78.27,Superbet,Máster Principal,42.00,52.00,6.35,412.30,0.11
+Fluminense,2025,"1,022.44",789.07,138.02,78.34,Superbet,Máster Principal,52.50,52.50,4.28,469.98,51.59
