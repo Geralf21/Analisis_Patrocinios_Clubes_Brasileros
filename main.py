@@ -6,11 +6,18 @@ from resultados.graficos import (
     analisis_desplazamiento,
     analisis_participacion_bets_vs_tradicionales,
     analisis_patrocinio_vs_tradicionales,
+    grafico_caida_superavit_2025,
+    grafico_dependencia_2019_vs_2025,
+    grafico_dependencia_2025,
+    grafico_resultado_sin_bets_2025,
+    grafico_superavit_2019,
+    grafico_tipo_presencia_por_anio,
 )
 
 
 BASE_DIR = Path(__file__).resolve().parent
 ARCHIVO_ORIGEN = BASE_DIR / "BaseDatos" / "balances_y_sponsors_2019_2025.csv"
+URL_RESPALDO = "https://raw.githubusercontent.com/Geralf21/Analisis_Patrocinios_Clubes_Brasileros/refs/heads/main/BaseDatos/balances_y_sponsors_2019_2025.csv"
 DIRECTORIO_RESULTADOS = BASE_DIR / "resultados"
 
 COLUMNAS = [
@@ -84,6 +91,63 @@ def cargar_datos():
     )
     return df_completo
 
+def cargar_datos_v2():
+    if ARCHIVO_ORIGEN.exists():
+        df = pd.read_csv(ARCHIVO_ORIGEN, thousands=",", encoding="utf-8")
+    else:
+        df = pd.read_csv(URL_RESPALDO, thousands=",")
+    
+    df.columns = df.columns.str.strip()
+    
+    df["pctj_bets_comercial"] = (
+            df["ingreso_sponsor_bet"] / df["ingreso_comercial_total"]
+        ) * 100
+    df["resultado_sin_bets"] = (
+            df["superavit_o_deficit"] - df["ingreso_sponsor_bet"]
+        )
+    
+    return df
+
+def mostrar_tablas_apoyo(df):
+    df_2025 = df[df["año"] == 2025].sort_values("pctj_bets_comercial")
+    print("\n--- Tabla 1: Impacto en superávit / déficit (2025) ---")
+    print(
+        df_2025[["club", "superavit_o_deficit", "resultado_sin_bets"]].to_string(
+            index=False
+        )
+    )
+
+    df_2025_pos = df_2025[df_2025["superavit_o_deficit"] > 0].copy()
+    df_2025_pos["caida_superavit_pct"] = (
+        df_2025_pos["ingreso_sponsor_bet"]
+        / df_2025_pos["superavit_o_deficit"]
+        * 100
+    )
+    df_2025_pos = df_2025_pos.sort_values("caida_superavit_pct")
+    print("\n--- Tabla 2: Caída porcentual en clubes con superávit (2025) ---")
+    print(
+        df_2025_pos[
+            [
+                "club",
+                "superavit_o_deficit",
+                "resultado_sin_bets",
+                "caida_superavit_pct",
+            ]
+        ].to_string(index=False)
+    )
+
+    df_2019 = df[df["año"] == 2019]
+    print("\n--- Tabla 3: Situación base en 2019 ---")
+    print(
+        df_2019[
+            [
+                "club",
+                "tipo_presencia_bet",
+                "ingreso_sponsor_bet",
+                "superavit_o_deficit",
+            ]
+        ].to_string(index=False)
+    )
 
 def main():
     print("Iniciando análisis de Sponsors (Bets vs Tradicionales)...")
@@ -121,6 +185,51 @@ def main():
             mostrar=True,
         )
 
+    print("Iniciando análisis de Dependencia e Impacto Financiero de Bets...")
+    df_p5 = cargar_datos_v2()
+    DIRECTORIO_RESULTADOS.mkdir(parents=True, exist_ok=True)
+
+    mostrar_tablas_apoyo(df_p5)
+
+    graficos_p5 = [
+        (
+            "Gráfico 1 (P5): Dependencia comercial 2025",
+            grafico_dependencia_2025,
+            "dependencia_bets_2025.png",
+        ),
+        (
+            "Gráfico 2(P5): Resultado ejercicio 2025 real vs sin bets",
+            grafico_resultado_sin_bets_2025,
+            "resultado_sin_bets_2025.png",
+        ),
+        (
+            "Gráfico 3(P5): Caída porcentual del superávit 2025",
+            grafico_caida_superavit_2025,
+            "caida_superavit_lollipop_2025.png",
+        ),
+        (
+            "Gráfico 4 (P5): Evolución del tipo de presencia (2019-2025)",
+            grafico_tipo_presencia_por_anio,
+            "tipo_presencia_por_anio.png",
+        ),
+        (
+            "Gráfico 5 (P5): Resultado del ejercicio 2019",
+            grafico_superavit_2019,
+            "superavit_2019.png",
+        ),
+        (
+            "Gráfico 6 (P5): Comparación de dependencia 2019 vs 2025",
+            grafico_dependencia_2019_vs_2025,
+            "dependencia_2019_vs_2025.png",
+        ),
+    ]
+    for titulo, funcion, _ in graficos_p5:
+        print(f"Generando {titulo}...")
+        funcion(
+            df_p5,
+            guardar_path=DIRECTORIO_RESULTADOS / nombre_archivo,
+            mostrar=True,
+        )
     print(f"Análisis finalizado. Resultados guardados en: {DIRECTORIO_RESULTADOS}")
 
 
