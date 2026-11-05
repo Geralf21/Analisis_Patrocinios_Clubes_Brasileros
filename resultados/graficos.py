@@ -7,13 +7,9 @@ import pandas as pd
 sns.set_theme(style="whitegrid")
 plt.rcParams["font.sans-serif"] = "DejaVu Sans"
 
-# =======================================
 # PREGUNTA 1.-¿Cómo evolucionó la participación y el peso económico
 #  de las casas de apuestas respecto a los sponsors tradicionales 
 #  (bancos, financieras, etc.) entre 2021 y 2026?
-
-# -->  ### Valentín Loffler  ###
-
 
 def analisis_patrocinio_vs_tradicionales(df, guardar_path=None, mostrar=True):
     """Grafica el volumen de patrocinios tradicionales y de apuestas por año."""
@@ -155,7 +151,7 @@ def analisis_participacion_bets_vs_tradicionales(
     )
 
     ax.set_title(
-        "Observación 2: Punto de Inflexión y Cambio de Mando\n"
+        "Punto de Inflexión y Cambio de Mando\n"
         "Share de Mercado (%): Casas de Apuestas vs. Sponsors Tradicionales "
         "(2019–2025)",
         fontsize=13,
@@ -240,13 +236,7 @@ def analisis_desplazamiento(df, guardar_path=None, mostrar=True):
         plt.show()
     return fig, ax
 
-# Cordero Martinez, Fiorella
-# ========================================
 
-# PREGUNTA 2.-
-# PREGUNTA 3.-
-# PREGUNTA 4-.
-# PREGUNTA 5-. 
 ## --> ¿Qué porcentaje de la facturación comercial de los equipos 
 # depende actualmente de firmas de apuestas, y cuál sería el impacto 
 # financiero estimado ante una eventual prohibición o restricción regulatoria estatal?
