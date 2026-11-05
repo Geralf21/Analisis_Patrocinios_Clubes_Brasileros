@@ -1,1 +1,4 @@
-Versiones de librerías usadas u otros elementos de interés. 
+pandas
+numpy
+matplotlib
+seaborn

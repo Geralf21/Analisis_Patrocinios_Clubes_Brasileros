@@ -13,10 +13,34 @@ from resultados.graficos import (
     grafico_superavit_2019,
     grafico_tipo_presencia_por_anio,
 )
+from resultados.graficosp2 import (
+    analisis_bets_vs_hinchada_2024,
+    analisis_patrocinios_por_anio,
+    mostrar_metricas_patrocinio,
+)
+from resultados.graficosp3 import (
+    analisis_rendimiento_posicion_promedio,
+    analisis_scatter_bets_vs_ingresos_netos,
+    analisis_scatter_etapas_pearson,
+    analisis_transferencias_paridad_vs_gasto,
+    crear_resumen_sponsors_p3,
+    mostrar_resumen_p3,
+    preparar_datos_p3,
+)
+from resultados.graficosp4 import (
+    crear_resumen_competiciones_p4,
+    grafico_ingresos_promedio_competicion_p4,
+    grafico_sponsors_vs_premios_por_periodo_p4,
+    mostrar_resumen_competiciones_p4,
+    preparar_datos_p4,
+)
 
 
 BASE_DIR = Path(__file__).resolve().parent
 ARCHIVO_ORIGEN = BASE_DIR / "BaseDatos" / "balances_y_sponsors_2019_2025.csv"
+ARCHIVO_PATROCINIOS = BASE_DIR / "BaseDatos" / "patrocinios_brsileirao.csv"
+ARCHIVO_DATOS_P3 = BASE_DIR / "BaseDatos" / "brasileirao_futbolistico.csv"
+ARCHIVO_DATOS_P4 = BASE_DIR / "BaseDatos" / "brasileirao_futbolistico.csv"
 URL_RESPALDO = "https://raw.githubusercontent.com/Geralf21/Analisis_Patrocinios_Clubes_Brasileros/refs/heads/main/BaseDatos/balances_y_sponsors_2019_2025.csv"
 DIRECTORIO_RESULTADOS = BASE_DIR / "resultados"
 
@@ -185,6 +209,97 @@ def main():
             mostrar=True,
         )
 
+    print("Iniciando análisis de patrocinios (pregunta 2)...")
+    df_p2 = pd.read_csv(ARCHIVO_PATROCINIOS, encoding="utf-8")
+    mostrar_metricas_patrocinio(df_p2)
+    graficos_p2 = [
+        (
+            "Comparación de patrocinios 2023 y 2024",
+            analisis_patrocinios_por_anio,
+            "patrocinios_2023_2024.png",
+        ),
+        (
+            "Relación entre apuestas e hinchada en 2024",
+            analisis_bets_vs_hinchada_2024,
+            "bets_vs_hinchada_2024.png",
+        ),
+    ]
+    for titulo, funcion, nombre_archivo in graficos_p2:
+        print(f"Generando {titulo}...")
+        funcion(
+            df_p2,
+            guardar_path=DIRECTORIO_RESULTADOS / nombre_archivo,
+            mostrar=True,
+        )
+
+    print("Iniciando análisis de desempeño deportivo y financiero (pregunta 3)...")
+    df_p3 = preparar_datos_p3(
+        pd.read_csv(ARCHIVO_DATOS_P3, encoding="utf-8")
+    )
+    resumen_p3 = crear_resumen_sponsors_p3(df_p3)
+    mostrar_resumen_p3(df_p3, resumen_p3)
+    graficos_p3 = [
+        (
+            "Relación entre apuestas y gasto en fichajes por período",
+            analisis_scatter_etapas_pearson,
+            df_p3,
+            "p3_apuestas_vs_fichajes_por_periodo.png",
+        ),
+        (
+            "Relación entre apuestas y saldo neto de transferencias",
+            analisis_scatter_bets_vs_ingresos_netos,
+            df_p3,
+            "p3_apuestas_vs_transferencias_netas.png",
+        ),
+        (
+            "Comparación de saldo neto y gasto en fichajes",
+            analisis_transferencias_paridad_vs_gasto,
+            resumen_p3,
+            "p3_transferencias_netas_y_gasto.png",
+        ),
+        (
+            "Posición promedio según tipo de patrocinador",
+            analisis_rendimiento_posicion_promedio,
+            df_p3,
+            "p3_posicion_promedio.png",
+        ),
+    ]
+    for titulo, funcion, datos, nombre_archivo in graficos_p3:
+        print(f"Generando {titulo}...")
+        funcion(
+            datos,
+            guardar_path=DIRECTORIO_RESULTADOS / nombre_archivo,
+            mostrar=True,
+        )
+
+    print("Iniciando análisis de ingresos por competición internacional (pregunta 4)...")
+    df_p4 = preparar_datos_p4(
+        pd.read_csv(ARCHIVO_DATOS_P4, encoding="utf-8")
+    )
+    resumen_p4 = crear_resumen_competiciones_p4(df_p4)
+    mostrar_resumen_competiciones_p4(resumen_p4)
+    graficos_p4 = [
+        (
+            "Ingresos promedio por competición",
+            grafico_ingresos_promedio_competicion_p4,
+            resumen_p4,
+            "p4_ingresos_promedio_por_competicion.png",
+        ),
+        (
+            "Sponsors y premios CONMEBOL por período",
+            grafico_sponsors_vs_premios_por_periodo_p4,
+            df_p4,
+            "p4_sponsors_vs_premios_por_periodo.png",
+        ),
+    ]
+    for titulo, funcion, datos, nombre_archivo in graficos_p4:
+        print(f"Generando {titulo}...")
+        funcion(
+            datos,
+            guardar_path=DIRECTORIO_RESULTADOS / nombre_archivo,
+            mostrar=True,
+        )
+
     print("Iniciando análisis de Dependencia e Impacto Financiero de Bets...")
     df_p5 = cargar_datos_v2()
     DIRECTORIO_RESULTADOS.mkdir(parents=True, exist_ok=True)
@@ -223,7 +338,7 @@ def main():
             "dependencia_2019_vs_2025.png",
         ),
     ]
-    for titulo, funcion, _ in graficos_p5:
+    for titulo, funcion, nombre_archivo in graficos_p5:
         print(f"Generando {titulo}...")
         funcion(
             df_p5,

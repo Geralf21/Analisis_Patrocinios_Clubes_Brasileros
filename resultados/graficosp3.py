@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
 
 sns.set_theme(style="whitegrid")
@@ -7,6 +8,149 @@ plt.rcParams["font.sans-serif"] = "DejaVu Sans"
 # =======================================
 # PREGUNTA 3.-¿Existe una relación directa entre el monto recibido por
 #  patrocinio de casas de apuestas y el desempeño deportivo/financiero?
+
+
+COLUMNAS_REQUERIDAS_P3 = {
+    "club",
+    "año",
+    "patrocinador_master",
+    "ingresos_sponsors_millones_BRL",
+    "posicion_liga",
+    "puntos_obtenidos",
+    "gasto_fichajes_millones_EUR",
+    "ingresos_ventas_millones_EUR",
+}
+
+
+def preparar_datos_p3(df):
+    """Prepara las columnas y categorías utilizadas por los análisis de P3."""
+    df = df.copy()
+    df.columns = df.columns.str.strip()
+    faltantes = COLUMNAS_REQUERIDAS_P3.difference(df.columns)
+    if faltantes:
+        raise ValueError(
+            "Faltan columnas requeridas para el análisis P3: "
+            + ", ".join(sorted(faltantes))
+        )
+
+    columnas_numericas = [
+        "año",
+        "ingresos_sponsors_millones_BRL",
+        "posicion_liga",
+        "puntos_obtenidos",
+        "gasto_fichajes_millones_EUR",
+        "ingresos_ventas_millones_EUR",
+    ]
+    for columna in columnas_numericas:
+        df[columna] = pd.to_numeric(df[columna], errors="coerce")
+
+    df["es_bet"] = df["patrocinador_master"].str.contains(
+        r"bet|pix|blaze|esportes",
+        case=False,
+        na=False,
+        regex=True,
+    )
+    df["ingresos_netos_transferencias_millones_EUR"] = (
+        df["ingresos_ventas_millones_EUR"]
+        - df["gasto_fichajes_millones_EUR"]
+    )
+    return df
+
+
+def crear_resumen_sponsors_p3(df):
+    """Agrega indicadores financieros y deportivos por tipo de patrocinador."""
+    columnas_requeridas = {
+        "es_bet",
+        "ingresos_sponsors_millones_BRL",
+        "ingresos_netos_transferencias_millones_EUR",
+        "gasto_fichajes_millones_EUR",
+        "puntos_obtenidos",
+        "posicion_liga",
+    }
+    faltantes = columnas_requeridas.difference(df.columns)
+    if faltantes:
+        raise ValueError(
+            "Faltan columnas para resumir los datos de P3: "
+            + ", ".join(sorted(faltantes))
+        )
+
+    resumen = (
+        df.groupby("es_bet")
+        .agg(
+            total_sponsors_BRL=("ingresos_sponsors_millones_BRL", "sum"),
+            promedio_sponsors_BRL=("ingresos_sponsors_millones_BRL", "mean"),
+            total_neto_transferencias_EUR=(
+                "ingresos_netos_transferencias_millones_EUR",
+                "sum",
+            ),
+            promedio_neto_transferencias_EUR=(
+                "ingresos_netos_transferencias_millones_EUR",
+                "mean",
+            ),
+            total_gasto_fichajes_EUR=("gasto_fichajes_millones_EUR", "sum"),
+            promedio_puntos=("puntos_obtenidos", "mean"),
+            promedio_posicion=("posicion_liga", "mean"),
+        )
+        .reset_index()
+    )
+    resumen["total_ingreso_sponsors_BRL"] = resumen["total_sponsors_BRL"]
+    resumen["categoria"] = resumen["es_bet"].map(
+        {True: "Casas de Apuestas", False: "Sponsors Tradicionales"}
+    )
+    return resumen
+
+
+def mostrar_resumen_p3(df, resumen):
+    """Muestra indicadores descriptivos y el resumen comparativo de P3."""
+    periodo1 = df.loc[(df["es_bet"]) & (df["año"] <= 2023)]
+    periodo2 = df.loc[(df["es_bet"]) & (df["año"] >= 2024)]
+    estadisticas_periodos = pd.DataFrame(
+        {
+            "n": [len(periodo1), len(periodo2)],
+            "mediana_sponsor_BRL": [
+                periodo1["ingresos_sponsors_millones_BRL"].median(),
+                periodo2["ingresos_sponsors_millones_BRL"].median(),
+            ],
+            "min_sponsor_BRL": [
+                periodo1["ingresos_sponsors_millones_BRL"].min(),
+                periodo2["ingresos_sponsors_millones_BRL"].min(),
+            ],
+            "max_sponsor_BRL": [
+                periodo1["ingresos_sponsors_millones_BRL"].max(),
+                periodo2["ingresos_sponsors_millones_BRL"].max(),
+            ],
+            "mediana_fichajes_EUR": [
+                periodo1["gasto_fichajes_millones_EUR"].median(),
+                periodo2["gasto_fichajes_millones_EUR"].median(),
+            ],
+        },
+        index=["2021-2023", "2024-2026"],
+    )
+    mayor_gasto = df.loc[df["gasto_fichajes_millones_EUR"].idxmax()]
+
+    print("\n--- P3: Resumen por período (patrocinadores de apuestas) ---")
+    print(estadisticas_periodos.to_string())
+    print(
+        "\nMayor gasto en fichajes: "
+        f"{mayor_gasto['club']} ({int(mayor_gasto['año'])}), "
+        f"{mayor_gasto['gasto_fichajes_millones_EUR']:.1f} M EUR"
+    )
+    print("\n--- P3: Indicadores por tipo de patrocinador ---")
+    print(
+        resumen[
+            [
+                "categoria",
+                "total_sponsors_BRL",
+                "promedio_sponsors_BRL",
+                "total_neto_transferencias_EUR",
+                "promedio_neto_transferencias_EUR",
+                "total_gasto_fichajes_EUR",
+                "promedio_puntos",
+                "promedio_posicion",
+            ]
+        ].to_string(index=False)
+    )
+    return estadisticas_periodos
 
 
 def analisis_rendimiento_posicion_promedio(df, guardar_path=None, mostrar=True):
@@ -22,7 +166,14 @@ def analisis_rendimiento_posicion_promedio(df, guardar_path=None, mostrar=True):
         data=promedios,
         x="categoria",
         y="posicion_liga",
-        palette=["#1F4E79", "#D14D49"],
+        hue="categoria",
+        hue_order=["Casas de Apuestas", "Sponsors Tradicionales"],
+        palette={
+            "Casas de Apuestas": "#1F4E79",
+            "Sponsors Tradicionales": "#D14D49",
+        },
+        dodge=False,
+        legend=False,
         width=0.4,
         ax=ax,
     )
@@ -75,7 +226,14 @@ def analisis_transferencias_paridad_vs_gasto(
         data=df_resumen,
         x="categoria",
         y="total_neto_transferencias_EUR",
-        palette=["#1F4E79", "#D14D49"],
+        hue="categoria",
+        hue_order=["Casas de Apuestas", "Sponsors Tradicionales"],
+        palette={
+            "Casas de Apuestas": "#1F4E79",
+            "Sponsors Tradicionales": "#D14D49",
+        },
+        dodge=False,
+        legend=False,
         width=0.4,
         ax=ax1,
     )
@@ -105,7 +263,14 @@ def analisis_transferencias_paridad_vs_gasto(
         data=df_resumen,
         x="categoria",
         y="total_gasto_fichajes_EUR",
-        palette=["#1F4E79", "#D14D49"],
+        hue="categoria",
+        hue_order=["Casas de Apuestas", "Sponsors Tradicionales"],
+        palette={
+            "Casas de Apuestas": "#1F4E79",
+            "Sponsors Tradicionales": "#D14D49",
+        },
+        dodge=False,
+        legend=False,
         width=0.4,
         ax=ax2,
     )
